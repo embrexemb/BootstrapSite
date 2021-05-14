@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Latitude</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/prismjs/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+
+    <!--Style updates-->
+    <style>
+ @font-face{
+      font-family:Alegreya;
+      src:url(https://fonts.google.com/specimen/Alegreya);
+    }
+
+    container{
+      font-family:Alegreya;
+    }
+
+    img{
+      float:left;
+      margin:5px;
+      width:100px
+    }
+    #fixed-width-PNG{width:720px;}
+    .spacer{height: 10px;}
+
+
+    </style>
+   
+  </head>
+
+  <body style="font-family: Alegreya;">
+  <a name="top"></a>
+  <div class="container">
+   <div class="bs-component">
+     <nav class="nav navbar-expand-lg navbar-light bg-light navbar-fixed-top" >
+       <div class="container-fluid">
+         <a class="navbar-brand" style="color:#20c997" href="Home.html">Latitude</a class="navbar-brand">
+          <div style="float:right">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div id="navbarResponsive" class="collapse navbar-collapse" id="navbarColor03">
+         
+          <ul class="navbar-nav ms-md-auto">
+            
+            <ul class="navbar-nav me-auto">
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown toggle" style="color:#20c997" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" style="color:#20c997" href="MaxTemp.html">Max Temps</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" style="color:#20c997" href="Humidity.html">Humidity</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" style="color:#20c997" href="Cloudiness.html">Cloudiness</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" style="color:#20c997" href="WindSpeed.html">Wind Speed</a>
+                  <div class="dropdown-divider"></div>
+                </div class="dropdown-menu">
+              </li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link" style="color:#20c997" href="Comparison.html">
+                  Comparison
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color:#20c997" href="Data.html">
+                  Data
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color:#20c997" href="Help.html">
+                  Help
+                </a>
+              </li>
+            </ul class="navbar-nav me-auto">
+          </ul class="navbar-nav ms-md-auto">
+        </div class="collapse navbar-collapse" >
+      </div style="float:right">
+      </div class="container-fluid">
+    </nav class="nav navbar-expand-lg navbar-light bg-light">
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+    <div class="page-header" id="banner"> 
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <h3 class="text-success">Summary: Latitude vs. X</h3>
+        <p class="text-success">
+          <img src="Resources/assets/images/Fig1.png" alt="Max Tempterature Visualization"  >
+          The purpose of this project was to analyze weather changes as you get close to the equator.  
+          To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a 
+          dataset on over 500 cities.<br/><br/>
+          After assembling the dataset, we used MatPlotlib to plot various aspects of weather versus 
+          latitude.  Factors we looked at included: temperature, cloudiness, humidity and wind speed.  
+          This site provides the source of the data and visualizations created as part of the analysis,
+          as well as explanations and descriptions of any trends and correlations witnessed.
+
+        </p>
+      </div class="col-lg-8 col-md" >
+
+
+      <div class="col-lg-4 col-md">
+
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+
+        <div class="page-header">
+          <h3 class="text-success"><center>Visualizations</center></h3>
+        </div>
+       
+        <div class="container">
+
+          <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+          <div class="row">
+            <div class="col-lg-6 col-md col-sm"><a href="MaxTemp.html" data-toggle="tooltip" title="Max Temp Visualization">
+              <img src="Resources/assets/images/Fig1.png" alt="Max Temp Visualization"style="vertical-align:middle">
+            </a></div>
+            <div class="col-lg-6 col-md col-sm"><a href="Humidity.html" data-toggle="tooltip" title="Humidity Visualization">
+              <img src="Resources/assets/images/Fig2.png" alt="Humidity Visualization"style="vertical-align:middle">
+            </a></div>
+            <div class="col-lg-6 col-md col-sm"> <a href="Cloudiness.html" data-toggle="tooltip" title="Cloudiness Visualization">
+              <img src="Resources/assets/images/Fig3.png" alt="Cloudiness Visualization"style="vertical-align:middle">
+            </a></div>
+            <div class="col-lg-6 col-md col-sm"> <a href="WindSpeed.html" data-toggle="tooltip" title="Wind Speed Visualization" >
+              <img src="Resources/assets/images/Fig4.png" alt="Wind Speed Visualization"style="vertical-align:middle">
+            </a></div>
+          </div>
+        
+         
+        </div>
+       
+        
+      </div class="col-lg-4 col-md">
+    </div class="row">  
+    </div class="page-header">
+
+  </div class="bs-component">
+    <footer id="footer">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-unstyled">
+            <li class="float-end"><a href="#top">Back to top</a></li>
+            <li><a href="MaxTemp.html">Plots</a>
+            <a href="Comparison.html">Comparison</a>
+            <a href="Data.html">Data</a>
+            <a href="Help.html">Help</a></li>
+          </ul>
+          <p>
+            Made by <a href="https://embrexemb.github.io/eve/">Eve Barkley</a><br/>
+            Code licensed under Open Source<br/>
+            Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a><br/>
+            Web fonts from <a href="https://fonts.google.com" rel="nofollow">Google</a>     
+         
+        </p>
+        </div>
+      </div>
+
+    </footer>
+  </div class="container">
+    <script src="javascript/https _bootswatch.com__assets_js_custom.js"></script>
+    <script src="javascript/https _bootswatch.com__vendor_bootstrap_dist_js_bootstrap.bundle.min.js"></script>
+    <script src="javascript/https _bootswatch.com__vendor_jquery_dist_jquery.min.js"></script>
+    <script src="javascript/https _bootswatch.com__vendor_prismjs_prism.js"></script>
+
+  </body>
+
+
+</html>
