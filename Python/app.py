@@ -27,7 +27,7 @@ def index():
     return render_template('index.html', data=mars)
     #return render_template('index.html')
 
-@app.route('/scrape')
+@app.route('/Python/scrape')
 def scraped():
     print(f'before scrape')
     #mars = mars_get
