@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 #mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 
-database = "mongodb+srv://Scott:nN5GELRQucw.qJb@cluster0.w73ay.mongodb.net/test?authSource=admin&replicaSet=atlas-42n68g-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+database = "mongodb+srv://Scott:#######@cluster0.w73ay.mongodb.net/test?authSource=admin&replicaSet=atlas-42n68g-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
 
 uri = database
 client = pymongo.MongoClient(uri)
