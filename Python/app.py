@@ -19,7 +19,7 @@ client = pymongo.MongoClient(uri)
 mars_app = client.mars_app
 mars_get = mars_app.mars
 
-@app.route('/BootstrapSite/Python')
+@app.route('/')
 def index():
     #mars=mongo.db.mars.find_one()
     mars=mars_get.find_one()
@@ -27,7 +27,7 @@ def index():
     return render_template('index.html', data=mars)
     #return render_template('index.html')
 
-@app.route('/BootstrapSite/Python/scrape')
+@app.route('/scrape.py')
 def scraped():
     print(f'before scrape')
     #mars = mars_get
