@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Latitude</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/prismjs/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+
+    <!--Style updates-->
+    <style>
+ @font-face{
+      font-family:Alegreya;
+      src:url(https://fonts.google.com/specimen/Alegreya);
+    }
+
+    container{
+      font-family:Alegreya;
+    }
+
+    img{
+      float:left;
+      margin:5px;
+      width:100px
+    }
+    #fixed-width-PNG{width:720px;}
+    .spacer{height: 10px;}
+
+
+    
+    </style>
+   
+  </head>
+<body>
+
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 align="center">Mission to Mars</h1>
+        
+        <p align="Center">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Scrape Mars Mission Data</a>
+        </p>
+    </div class="jumbotron">
+    <div class="page-header">
+        <h2>Latest Mars News</h2>
+    </div class="page-header">
+    
+    {% for data in mars %} 
+    <div class="container-fluid">
+        <h2>{{data.news_title}}</h2>
+        <p>{{data.news_paragraph}}</p>
+    </div class="container-fluid">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Featured Image</h3>
+                
+                <img src="{{data.featured_image}}" alt="featured image" style="width: 80%;">
+
+            </div>
+            <div class="col-md-5">
+               
+                    
+                <ul>
+                    <h3>Mars Facts</h3>
+                    {{data.mars_facts_table|safe}}
+                    <a href="{{data.mars_facts_table}}"></a>
+                </ul>
+            </div>
+        </div>                 
+    </div>
+
+    <div class="container-fluid">
+        <H3 align="center">Mars Hemispheres</H3>
+        <div class="body">
+        <div class="row">
+            <div class="col-md-3">
+                {% for hemisphere in data.hemisphere_img_url[0:2] %}
+                
+                <img src="{{hemisphere['image url']}}" alt="hemisphere" style="width:50%;">
+                <div class="caption"style="font-weight: bold;">
+                    {{hemisphere['image title']}}
+                </div>                                           
+                {% endfor %}
+            </div>
+            <div class="col-md-3">
+                {% for hemisphere in data.hemisphere_img_url[2:4] %}
+                
+                <img src="{{hemisphere['image url']}}" alt="hemisphere" style="width:50%;">
+                <div class="caption" style="font-weight: bold;">
+                    {{hemisphere['image title']}}
+                </div>                                           
+                {% endfor %}
+            </div>    
+            <div class="col-md-3">
+                    {% for hemisphere in data.hemisphere_img_url[4:6] %}
+                    
+                    <img src="{{hemisphere['image url']}}" alt="hemisphere" style="width:50%;">
+                    <div class="caption" style="font-weight: bold;">
+                        {{hemisphere['image title']}}
+                    </div>                                           
+                    {% endfor %}
+            </div>
+            <div class="col-md-3">
+                        {% for hemisphere in data.hemisphere_img_url[6:8] %}
+                        
+                        <img src="{{hemisphere['image url']}}" alt="hemisphere" style="width:50%;">
+                        <div class="caption" style="font-weight: bold;">
+                            {{hemisphere['image title']}}
+                        </div>                                           
+                        {% endfor %}
+
+
+            </div>
+        </div>
+        </div>
+
+</div>
+    
+    
+    {% endfor %}            
+</div>
+            
+</div>
+
+
+
+<footer id="footer">
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="list-unstyled">
+        <li class="float-end"><a href="#top">Back to top</a></li>
+       
+      </ul>
+      <p>
+        Made by <a href="https://embrexemb.github.io/eve/">Eve Barkley</a><br/>
+        Code licensed under Open Source<br/>
+        Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a><br/>
+        Web fonts from <a href="https://fonts.google.com" rel="nofollow">Google</a>     
+     
+    </p>
+    </div>
+  </div>
+
+</footer>
+
+</div class="container">
+<script src="javascript/https _bootswatch.com__assets_js_custom.js"></script>
+<script src="javascript/https _bootswatch.com__vendor_bootstrap_dist_js_bootstrap.bundle.min.js"></script>
+<script src="javascript/https _bootswatch.com__vendor_jquery_dist_jquery.min.js"></script>
+<script src="javascript/https _bootswatch.com__vendor_prismjs_prism.js"></script>
+
+</body>
+
+
+</html>

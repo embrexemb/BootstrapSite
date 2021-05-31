@@ -1,0 +1,47 @@
+ <div class="container-fluid">
+        <H3 align="center">Mars Hemispheres</H3>
+        <div class="body">
+        <div class="row">
+            <div class="col-md-3">
+                {% for hemisphere in data.hemispheres[0:2] %}
+                
+                <img src="{{hemispheres['image url']}}" alt="hemisphere" style="width:50%;">
+                <div class="caption"style="font-weight: bold;">
+                    {{hemispheres['title']}}
+                </div>                                           
+                {% endfor %}
+            </div>
+            <div class="col-md-3">
+                {% for hemisphere in data.hemispheres[2:4] %}
+                
+                <img src="{{hemispheres['image url']}}" alt="hemisphere" style="width:50%;">
+                <div class="caption" style="font-weight: bold;">
+                    {{hemispheres['title']}}
+                </div>                                           
+                {% endfor %}
+            </div>    
+            <div class="col-md-3">
+                    {% for hemisphere in data.hemispheres[4:6] %}
+                    
+                    <img src="{{hemispheres['image url']}}" alt="hemisphere" style="width:50%;">
+                    <div class="caption" style="font-weight: bold;">
+                        {{hemispheres['title']}}
+                    </div>                                           
+                    {% endfor %}
+            </div>
+            <div class="col-md-3">
+                        {% for hemisphere in data.hemispheres[6:8] %}
+                        
+                        <img src="{{hemispheres['image url']}}" alt="hemisphere" style="width:50%;">
+                        <div class="caption" style="font-weight: bold;">
+                            {{hemispheres['title']}}
+                        </div>                                           
+                        {% endfor %}
+
+
+            </div>
+        </div>
+        </div>
+
+</div>
+    

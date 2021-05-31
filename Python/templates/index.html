@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mars Mission</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/prismjs/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+
+    <!--Style updates-->
+    <style>
+ @font-face{
+      font-family:Alegreya;
+      src:url(https://fonts.google.com/specimen/Alegreya);
+    }
+
+    container{
+      font-family:Alegreya;
+    }
+
+    img{
+      float:left;
+      margin:5px;
+      width:100px
+    }
+    #fixed-width-PNG{width:720px;}
+    .spacer{height: 10px;}
+
+
+    
+    </style>
+   
+  </head>
+<body>
+
+
+
+<div class="container">
+    <!-- Background image -->
+  <div
+  class="p-5 text-center bg-image"
+  style="
+    background-image: url('https://raw.githubusercontent.com/embrexemb/web-scraping-challenge/main/mission_to_mars.png');
+    height: 600px;
+  "
+>
+  <div class="mask" style="background-color: rgba(223, 200, 200, 0.6); " >
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Mission To Mars</h1>
+    
+        <a class="btn btn-success btn-lg" href="/scrape" role="button">Scrape Mars Mission Data</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+    <div class="page-header">
+        <h3 class="mb3">Latest Mars News</h3>
+    </div class="page-header">
+    
+ 
+    <div class="container-fluid">
+      <strong> <p>{{data.news_title}}</p> </strong>
+        
+        <p>{{data.news_paragraph}}</p>
+    </div class="container-fluid">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Featured Image</h3>
+                
+                <img src="{{data.featured_image}}" alt="featured image" style="width: 100%;">
+
+            </div>
+            <div class="col-md-5">
+               
+                    
+                <ul>
+                   <strong><p>Mars Facts</p></strong> 
+                    {{data.mars_facts_table|safe}}
+                   
+                </ul>
+            </div>
+        </div>                 
+    </div>
+<br> <br>
+   <div class="container-fluid">
+     <h3 align="center">Mars Hemispheres</h3> <br>
+     <div class="body">
+        <div class="row">
+        {% for hemisphere in data.hemisphere_img_url%}
+          <div class="col-md-3">
+            
+               <img src="{{hemisphere.img_url| default('Resources/assets/images/Nasa_img.png',true)}}" alt='hemispheres' style="width:100%">  
+                  {{hemisphere.title}}  
+           
+             
+           
+
+
+          </div>
+        {% endfor  %}
+
+        </div>
+     </div>
+   </div>
+    
+     
+    
+    <footer id="footer">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-unstyled">
+            <li class="float-end"><a href="#top">Back to top</a></li>
+           
+          </ul>
+          <p>
+            Made by <a href="https://embrexemb.github.io/eve/">Eve Barkley</a><br/>
+            Code licensed under Open Source<br/>
+            Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a><br/>
+            Web fonts from <a href="https://fonts.google.com" rel="nofollow">Google</a>     
+         
+        </p>
+        </div>
+      </div>
+    
+    </footer>   
+
+
+            
+
+
+
+
+</div class="container">
+  <script src="javascript/https _bootswatch.com__assets_js_custom.js"></script>
+  <script src="javascript/https _bootswatch.com__vendor_bootstrap_dist_js_bootstrap.bundle.min.js"></script>
+  <script src="javascript/https _bootswatch.com__vendor_jquery_dist_jquery.min.js"></script>
+  <script src="javascript/https _bootswatch.com__vendor_prismjs_prism.js"></script>
+
+</body>
+
+
+</html>
