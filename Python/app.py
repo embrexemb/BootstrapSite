@@ -19,7 +19,7 @@ client = pymongo.MongoClient(uri)
 mars_app = client.mars_app
 mars_get = mars_app.mars
 
-@app.route('/')
+@app.route('/Python')
 def index():
     #mars=mongo.db.mars.find_one()
     mars=mars_get.find_one()
